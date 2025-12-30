@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  background: #222;
+}
+.theme-switcher {
+  position: absolute;
+  top: 20px;
+}
+.theme-switcher button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.calculator {
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px paleturquoise;
+}
+#history {
+  height: 120px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  color: white;
+}
+#display {
+  height: 80px;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 2.5rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+  color: #0f0;
+}
+#copy {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #008cff;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+}
+button:hover {
+  transform: scale(1.06);
+}
+button:active {
+  transform: scale(0.92);
+}
+button::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0.7;
+  transition: 0.5s;
+}
+button:active::after {
+  transform: scale(15);
+  opacity: 0;
+}
+.neon {
+  background: radial-gradient(circle, #1a0033, #000);
+}
+.neon button {
+  box-shadow: 0 0 15px #a200ff;
+  color: #ff00ff;
+}
+.neon #display {
+  color: #00ffea;
+}
+.glass {
+  background: linear-gradient(120deg, #ffffff22, #ffffff08);
+}
+.glass button {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+.pastel {
+  background: #f8e7ff;
+}
+.pastel button {
+  background: #ffe3ff;
+  color: #7d3381;
+}
+.zero {
+  grid-column: span 2;
+}
+.equal {
+  background: #00ff99 !important;
+  color: black !important;
+}
