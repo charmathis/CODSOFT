@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Arial, sans-serif;
+}
+
+body{
+  background: #000;
+  color: #fff;
+}
+.cartTab{
+  width: 420px;
+  height: 100vh;
+  background: #111;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr 80px;
+  animation: slideIn 0.5s ease forwards;
+  box-shadow: -20px 0 40px rgba(0,0,0,0.8);
+}
+@keyframes slideIn{
+  from{
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.cartTab h1{
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 400;
+  border-bottom: 1px solid #222;
+}
+.listCart{
+  padding: 15px;
+  overflow-y: auto;
+}
+.listCart .item{
+  display: grid;
+  grid-template-columns: 1fr 90px 110px;
+  gap: 10px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #1c1c1c;
+  animation: fadeUp 0.4s ease;
+}
+@keyframes fadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.listCart .name{
+  font-size: 15px;
+  font-weight: 500;
+}
+.listCart .totalPrice{
+  font-size: 15px;
+  font-weight: bold;
+  color: orangered;
+  text-align: right;
+}
+.quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.quantity span{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.quantity span:hover{
+  background: orangered;
+  color: white;
+}
+.btn{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn button{
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn .close{
+  background: #fff;
+  color: #000;
+}
+.btn .checkout{
+  background: orangered;
+  color: white;
+}
+
+.btn button:hover{
+  opacity: 0.85;
+}
+.listCart::-webkit-scrollbar{
+  width: 6px;
+}
+
+.listCart::-webkit-scrollbar-thumb{
+  background: orangered;
+  border-radius: 10px;
+}
+body{
+    margin: 0;
+    background: 
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("https://images.wallpapersden.com/image/download/apple-wwdc-2023_bmVraGWUmZqaraWkpJRsaWplrWltZms.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+section{
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.scroll-section{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+.scroll-section.show{
+    opacity: 1;
+    transform: translateY(0);
+}

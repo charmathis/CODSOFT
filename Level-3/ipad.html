@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mac – Apple Store</title>
+<link rel="stylesheet" href="mac.css">
+</head>
+<body>
+<header class="navbar">
+    <img src="https://static.vecteezy.com/system/resources/previews/020/489/291/non_2x/3d-logo-of-apple-iphone-free-png.png"
+         alt="Apple Logo" onclick="goHome()">
+    <h2>iPad</h2>
+    <nav>
+        <a href="store.html">Store</a>
+        <a href="mac.html" >Mac</a>
+        <a href="ipad.html" class="active">iPad</a>
+        <a href="iphone.html" >iPhone</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="javascript:void(0)" class="cart" onclick="openCart()">🛒</a>
+    </nav>
+</header>
+<section class="hero">
+    <h1>iPad</h1>
+    <p>Powerful. Portable. Professional. Advanced camera system. New.
+    </p>
+</section>
+ <main class="contents">
+<section class="products">
+    <div class="card">
+        <img src="https://www.pngall.com/wp-content/uploads/5/iPad-PNG-Image-HD.png">
+        <h3>ipad pro</h3>
+        <p>79,000</p>
+        <button onclick="addToCart('iPad Pro')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://res-5.cloudinary.com/grover/image/upload/v1630928864/xthpsyi7jsxpsshbiuo9.png">
+        <h3>ipad Air</h3>
+        <p>₹89,000</p>
+        <button onclick="addToCart('iPad Air')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://cdn.tmobile.com/content/dam/t-mobile/en-p/internet-devices/apple/Apple-iPad-Air-5th-gen/Purple/Apple-iPad-Air-5th-gen-Purple-frontimage.png">
+        <h3>ipad Mini</h3>
+        <p>₹45,999</p>
+        <button onclick="addToCart('iPad Mini')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<section class="products">
+    <div class="card">
+        <img src="https://www.pngall.com/wp-content/uploads/5/Apple-IPad-PNG-Image-HD.png">
+        <h3>ipad touchscreen</h3>
+        <p>₹90,000</p>
+        <button onclick="addToCart('iPad Touchscreen')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/ipad_pro_129_3_camera.png">
+        <h3>ipad Pro</h3>
+        <p>₹1,00,000</p>
+        <button onclick="addToCart('iPad Pro')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://cdsassets.apple.com/live/7WUAS350/images/ipad/ipad/ios13-4-ipad-pro-4gen-12-9-in.png">
+        <h3>ipad 13</h3>
+        <p>₹90,999</p>
+        <button onclick="addToCart('iPad 13')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<section class="products">
+    <div class="card">
+        <img src="https://media.ldlc.com/apple/ipad_2022/images/hero_large_2x.png?1665607772604">
+        <h3>ipad 14</h3>
+        <p>₹85,000</p>
+        <button onclick="addToCart('iPad 14')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://www.pngall.com/wp-content/uploads/5/Apple-iPad-PNG-File.png">
+        <h3>ipad 10</h3>
+        <p>₹50,000</p>
+        <button onclick="addToCart('iPad 10')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="http://www.pngmart.com/files/3/IPad-Tablet-PNG-HD.png">
+        <h3>ipad 13 Mini</h3>
+        <p>₹60,999</p>
+        <button onclick="addToCart('iPad 13 Mini')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">.
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 iPhone Store. All rights reserved.</p>
+  </div>
+  <div class="footer-links">
+    <a href="#" onclick="openModal('terms'); return false;">Terms & Conditions</a>
+    <a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a>
+    <a href="#" onclick="openModal('security'); return false;">Security</a>
+  </div>
+</footer>
+<div id="infoModal" class="modal">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+<script>
+function addToCart(name, price) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      name: name,
+      price: Number(price),
+      quantity: 1
+    });
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "cart.html";
+}
+</script>
+<script src="mac.js"></script>
+</body>
+</html>

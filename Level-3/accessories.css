@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+}
+.content{
+    max-width: 1200px;
+    margin: auto;     
+    padding-bottom: 80px;
+}
+.footer {
+  width: 100%;
+  background: #000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-links {
+  margin-top: 10px;
+}
+.footer-links a {
+  color: #ff4500; 
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: white;
+}
+.modal {
+    display: none;   
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.modal-box {
+  background: #111;
+  color: white;
+  width: 420px;
+  max-width: 90%;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  animation: zoomIn 0.3s ease;
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  color: orangered;
+}
+.modal-box h2 {
+  margin-bottom: 15px;
+  color: orangered;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 40px;
+    background:#fff;
+    position:sticky;
+    top:0;
+    color: black;
+
+}
+.navbar img{
+    width:35px;
+    cursor:pointer;
+}
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+}
+nav a.active{
+    border-bottom:2px solid orangered;
+}
+.hero{
+    padding:80px;
+    text-align:center;
+}
+.hero h1{
+    font-size:70px;
+}
+.hero p{
+    font-size:20px;
+    margin-top:10px;
+}
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;              
+    gap: 40px;
+    padding: 60px 20px;
+}
+.card{
+    width: 260px;
+    background: #d3d3d3;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+.card:hover{
+    transform:scale(1.05);
+}
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card img{
+    width:200px;
+    height:250px;
+    object-fit:contain;
+}
+.card button{
+    margin-top:10px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    background:orangered;
+    color:white;
+    cursor:pointer;
+}
+body{
+    margin: 0;
+    background: 
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("https://images.wallpapersden.com/image/download/apple-wwdc-2023_bmVraGWUmZqaraWkpJRsaWplrWltZms.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+section{
+    animation: fadeIn 1.2s ease-in;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.scroll-section{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+
+.scroll-section.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+    font-size:14px;
+    border-top:1px solid #333;
+    padding-top:15px;
+}
+
+
+
+

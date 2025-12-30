@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iPhone Store</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="https://wallpapers.com/images/hd/apple-logo-silver-364lc2f68kt51nm3.jpg" alt="Apple logo">
+        <h2>iPhone Store</h2>
+        <div class="nav-right">
+            <span id="userName"></span>   
+        </div>
+        <div class="nav-link">
+            <button type="button" onclick="openSection('Store')">Store</button>
+        </div>
+        <div class="nav-link">
+            <button type="button" onclick="openSection('Mac')">Mac</button>
+        </div>
+        <div class="nav-link">
+            <button type="button" onclick="openSection('iPad')">iPad</button>
+        </div>
+        <div class="nav-link">
+            <button type="button" onclick="openSection('iPhone')">iPhone</button>
+        </div>
+        <div class="nav-link">
+            <button type="button" onclick="openSection('Accessories')">Accessories</button>
+        </div>
+        <div class="nav-right">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+    <section class="store-table">
+    <h2>Apple Store Categories</h2>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>Store</td>
+            <td>Latest Apple products & offers</td>
+            <td><button type="button" onclick="visitCategory('Store')">Visit</button></td>
+        </tr>
+
+        <tr>
+            <td>Mac</td>
+            <td>MacBook Air, MacBook Pro, iMac</td>
+            <td><button type="button" onclick="visitCategory('Mac')">Explore</button></td>
+        </tr>
+
+        <tr>
+            <td>iPad</td>
+            <td>iPad Pro, iPad Air, iPad Mini</td>
+            <td><button type="button" onclick="visitCategory('iPad')">Explore</button></td>
+        </tr>
+
+        <tr>
+            <td>iPhone</td>
+            <td>iPhone 14, 15, 15 Pro</td>
+            <td><button type="button" onclick="visitCategory('iPhone')">Shop</button></td>
+        </tr>
+
+        <tr>
+            <td>Accessories</td>
+            <td>AirPods, Chargers, Covers</td>
+            <td><button type="button" onclick="visitCategory('Accessories')">View</button></td>
+        </tr>
+    </table>
+</section>
+    <section class="hero">
+        <h1>Buy Your Favourite Products</h1>
+        <p>Premium design. Powerful performance.</p>
+    </section>
+    <section class="products">
+        <div class="card">
+            <img src="https://www.pngall.com/wp-content/uploads/13/iPhone-14-No-Background.png">
+            <h3>iPhone 14</h3>
+            <p>₹69,999</p>
+            <button type="button" onclick="addToCart('iPhone 14')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://img-prd-pim.poorvika.com/product/Apple-iphone-15-pro-max-black-titanium-512gb-Front-Back-View-Image.png">
+            <h3>iPhone 15</h3>
+            <p>₹79,999</p>
+            <button onclick="addToCart('iPhone 15')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/09/iphone-15-1.png">
+            <h3>iPhone 15 Pro</h3>
+            <p>₹1,34,999</p>
+            <button onclick="addToCart('iPhone 15 Pro')">Add to Cart</button>
+        </div>
+        <section class="scroll-section">...</section>
+    </section>
+    <section class="products">
+        <div class="card">
+            <img src="https://www.freepnglogos.com/uploads/macbook-png/apple-macbook-pro-with-retina-display-hands-preview-4.png">
+            <h3>Macbook laptop</h3>
+            <p>₹1,00,000</p>
+            <button onclick="addToCart('Macbook laptop')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://freepngimg.com/thumb/macbook/70194-apple-family-laptop-pro-air-macbook.png">
+            <h3>Macbook Air</h3>
+            <p>₹1,60,000</p>
+            <button onclick="addToCart('Macbook Air')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://media.ldlc.com/apple/MacBook_Pro_16/imgMacBookPro16/S1_Smart_1@2x.png">
+            <h3>Macbook Pro</h3>
+            <p>₹2,34,999</p>
+            <button onclick="addToCart('Macbook Pro')">Add to Cart</button>
+        </div>
+        <section class="scroll-section">...</section>
+    </section>
+    <section class="products">
+        <div class="card">
+            <img src="https://www.pngall.com/wp-content/uploads/15/Apple-Watch-Transparent.png">
+            <h3>Apple watch ultra 3</h3>
+            <p>₹1,00,000</p>
+            <button onclick="addToCart('Apple watch ultra 3')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://www.rogers.com/apple-images/watch/40mm-grey-angle.png">
+            <h3>Apple watch series 3</h3>
+            <p>₹89,0000</p>
+            <button onclick="addToCart('Apple watch series 3')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://www.pngarts.com/files/8/Apple-Watch-Download-PNG-Image.png">
+            <h3>Apple watch series 11</h3>
+            <p>₹67,999</p>
+            <button onclick="addToCart('Apple watch series 11')">Add to Cart</button>
+        </div>
+        <section class="scroll-section">...</section>
+    </section>
+    <section class="products">
+        <div class="card">
+            <img src="https://www.pngall.com/wp-content/uploads/5/iPad-PNG-Image-HD.png">
+            <h3>ipad pro</h3>
+            <p>₹75,000</p>
+            <button onclick="addToCart('ipad pro')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://res-5.cloudinary.com/grover/image/upload/v1630928864/xthpsyi7jsxpsshbiuo9.png">
+            <h3>ipad Air</h3>
+            <p>₹89,0000</p>
+            <button onclick="addToCart('ipad Air')">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://cdn.tmobile.com/content/dam/t-mobile/en-p/internet-devices/apple/Apple-iPad-Air-5th-gen/Purple/Apple-iPad-Air-5th-gen-Purple-frontimage.png">
+            <h3>ipad Mini</h3>
+            <p>₹48,999</p>
+            <button onclick="addToCart('ipad Mini')">Add to Cart</button>
+        </div>
+        <section class="scroll-section">...</section>
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Store</h3>
+            <p>Find a Store</p>
+            <p>Genius Bar</p>
+            <p>Today at Apple</p>
+        </div>
+        <div class="footer-col">
+            <h3>Products</h3>
+            <p>Mac</p>
+            <p>iPad</p>
+            <p>iPhone</p>
+            <p>Accessories</p>
+        </div>
+        <div class="footer-col">
+            <h3>Account</h3>
+            <p>Manage Apple ID</p>
+            <p>Orders</p>
+            <p>Sign In</p>
+        </div>
+        <div class="footer-col">
+            <h3>Support</h3>
+            <p>Help Center</p>
+            <p>Contact Us</p>
+            <p>FAQs</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 iPhone Store. All rights reserved.
+    </div>
+</footer>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>

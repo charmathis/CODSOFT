@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mac – Apple Store</title>
+<link rel="stylesheet" href="mac.css">
+</head>
+<body>
+<header class="navbar">
+    <img src="https://static.vecteezy.com/system/resources/previews/020/489/291/non_2x/3d-logo-of-apple-iphone-free-png.png"
+         alt="Apple Logo" onclick="goHome()">
+    <h2>Mac Products</h2>
+    <nav>
+        <a href="store.html">Store</a>
+        <a href="mac.html" class="active">Mac</a>
+        <a href="ipad.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="javascript:void(0)" class="cart" onclick="openCart()">🛒</a>
+
+    </nav>
+</header>
+<section class="hero">
+    <h1>Mac</h1>
+    <p>Powerful. Portable. Professional.</p>
+</section>
+ <main class="contents">
+<section class="products">
+
+    <div class="card">
+        <img src="https://www.freepnglogos.com/uploads/macbook-png/apple-macbook-pro-with-retina-display-hands-preview-4.png">
+        <h3>Macbook laptop</h3>
+        <p>₹1,00,000</p>
+        <button onclick="addToCart('Macbook laptop')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://freepngimg.com/thumb/macbook/70194-apple-family-laptop-pro-air-macbook.png">
+        <h3>Macbook Air</h3>
+        <p>₹1,60,000</p>
+        <button onclick="addToCart('Macbook Air')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://media.ldlc.com/apple/MacBook_Pro_16/imgMacBookPro16/S1_Smart_1@2x.png">
+        <h3>Macbook Pro</h3>
+        <p>₹2,34,999</p>
+        <button onclick="addToCart('Macbook Pro')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<section class="products">
+    <div class="card">
+        <img src="http://royaltyfreefootages.com/upload/video/Apple%20laptop%20PNG%20image,%20transparent%20Apple%20laptop%20png%20image,%20Apple%20laptop%20png%20hd%20images%20download_1658745513.png">
+        <h3>Macbook laptop</h3>
+        <p>₹1,50,000</p>
+        <button onclick="addToCart('Macbook laptop')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://cdn.shopify.com/s/files/1/1409/9796/products/0_7794e868-9ff2-4c6f-ba17-a5ae5db5a517_1024x1024.png?v=1584347701">
+        <h3>Macbook Air</h3>
+        <p>₹1,90,000</p>
+        <button onclick="addToCart('Macbook Air')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://pngimg.com/d/macbook_PNG101748.png">
+        <h3>Macbook Pro</h3>
+        <p>₹2,30,999</p>
+        <button onclick="addToCart('Macbook Pro')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<section class="products">
+    <div class="card">
+        <img src="https://www.pngmart.com/files/22/Imac-PNG-Isolated-Pic.png">
+        <h3>Macbook desktop</h3>
+        <p>₹2,20,000</p>
+        <button onclick="addToCart('Macbook desktop')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://purepng.com/public/uploads/large/mac-book-ckq.png">
+        <h3>Macbook system </h3>
+        <p>₹3,70,000</p>
+        <button onclick="addToCart('Macbook system ')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://i.pinimg.com/originals/9e/43/44/9e4344fbf8840d797623bdaedae115e8.png">
+        <h3>Macbook System </h3>
+        <p>₹3,40,999</p>
+        <button onclick="addToCart('Macbook System ')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">.
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 iPhone Store. All rights reserved.</p>
+  </div>
+  <div class="footer-links">
+    <a href="#" onclick="openModal('terms'); return false;">Terms & Conditions</a>
+    <a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a>
+    <a href="#" onclick="openModal('security'); return false;">Security</a>
+  </div>
+<div id="infoModal" class="modal">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+<script>
+function addToCart(name, price) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      name: name,
+      price: Number(price),
+      quantity: 1
+    });
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "cart.html";
+}
+</script>
+<script src="mac.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:left;
+    padding:20px 50px;
+    border-bottom:1px solid gray;
+    gap: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar img{
+    width: 30px;
+    height: auto;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+}
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.navbar button{
+    padding:8px 20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+.nav-link{
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.nav-link:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px orangered;
+}
+
+
+
+.nav-right button{
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background: orangered;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-right button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px orangered;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+.products{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:40px;
+}
+.card{
+    background: silver;
+    border-radius:20px;
+    padding:20px;
+    width:250px;
+    text-align:center;
+    transition:transform 0.4s;
+    color: #111;
+}
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:200px;
+    height:250px;
+    object-fit:contain;
+}
+.card button{
+    margin-top:10px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    background:orangered;
+    color:white;
+    cursor:pointer;
+}
+.store-table{
+    padding:40px;
+    text-align:center;
+}
+.store-table h2{
+    margin-bottom:20px;
+}
+table{
+    width:80%;
+    margin:auto;
+    border-collapse:collapse;
+    border-radius:15px;
+    overflow:hidden;
+}
+th, td{
+    padding:18px;
+    border-bottom:1px solid silver;
+}
+
+th{
+    background: silver;
+    color: #111;
+}
+td button{
+    padding:8px 20px;
+    border:none;
+    border-radius:20px;
+    background:orangered;
+    color: white;
+    cursor:pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px orangered;
+}
+tr:hover{
+    background:#1c1c1c;
+}
+body{
+    margin: 0;
+    background: 
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("https://images.wallpapersden.com/image/download/apple-wwdc-2023_bmVraGWUmZqaraWkpJRsaWplrWltZms.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* IMPORTANT */
+}
+section{
+    animation: fadeIn 1.2s ease-in;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.scroll-section{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+
+.scroll-section.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer{
+    background:grey;
+    color: black;
+    padding:50px 20px 20px;
+    margin-top:80px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.footer-col h3{
+    color: black;
+    margin-bottom:15px;
+}
+
+.footer-col p{
+    margin:8px 0;
+    cursor:pointer;
+    transition:0.3s;
+    color: black;
+}
+
+.footer-col p:hover{
+    color:orangered;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:40px;
+    font-size:14px;
+    border-top:1px solid #333;
+    padding-top:15px;
+}

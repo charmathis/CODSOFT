@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce website</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .Main{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+        }
+        .Sub1{
+            width: 100vw;
+            height: 25vh;
+            position: absolute;
+            top: -2vh;
+            left: -5vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 300px;
+            font-weight: bold;
+            color: silver;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            transition: all ease 1s;
+        }
+        .Box{
+            width: 25vw;
+            height: 75vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           transform: rotate(90deg);
+           transition: all ease 0.5s;
+        }
+        .Box img{
+            width: 35vw;
+            height: 80vh;
+        }
+        .Sub2{
+            position: absolute;
+            top: 25vh;
+            left: 0vw;
+            z-index: 3;
+        }
+        .Sub3{
+            position: absolute;
+            top: 25vh;
+            left: 15vw;
+            z-index: 2;
+        }
+        .Sub4{
+            position: absolute;
+            top: 25vh;
+            left: 30vw;
+            z-index: 1;
+        }
+        .Sub6{
+            position: absolute;
+            top: 25vh;
+            left: 45vw;
+            z-index: 0;
+        }
+        .Sub5{
+            position: sticky;
+            top: 10px;
+            left: 20px;
+            z-index: 3;
+        }
+        .Sub5 img{
+            width: 100px;
+        }
+        .Main:hover .Sub6{
+             left: 50vw;
+             transition-delay: 1s;
+        }
+        .Main:hover .Sub4{
+             left: 35vw;
+             transition-delay: 1.5s;
+        }
+        .Main:hover .Sub3{
+             left: 20vw;
+             transition-delay: 2s;
+        }
+        .Main:hover .Sub2{
+              left: 5vw;
+              transition-delay: 2.5s;
+
+        }
+        .Main:hover .Sub1{
+             top: 0vh;
+            left: 0vw;
+        }
+        
+        .Second{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            position: relative;
+        }
+        .Box1{
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40vw;
+            height: 90vh;
+            position: absolute;
+            left: 5vw;
+            top: 5vh;
+            font-size: x-large;
+            color: rgb(255, 255, 255);
+        }
+        input{
+            display: block;
+            width: 300px;
+            height: 50px;
+            margin-bottom: 50px;
+            background-color: rgb(0, 0, 0,0.5);
+            border-radius: 30px;
+            color: white;
+            font-size: large;
+            padding-left: 20px;
+        }
+        button{
+            width: 300px;
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-size: large;
+            border-radius: 30px;
+            transition: all 2s ease;
+        }
+        ::placeholder{
+            font-size: larger;
+            padding-left: 50px;
+            color: white;
+        }
+        .Box2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40vw;
+            height: 90vh;
+            position: absolute;
+            left: 5vw;
+            top: 5vh;
+            transition: all 2s ease;
+
+        }
+        .Box2 img{
+            width: 35vw;
+            height: 95vh;
+        }
+        .Second:hover .Box2{
+            left: 55vw;
+        }
+         button:hover{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+      <div class="Sub1">
+        iPhone
+      </div>
+      <div class="Sub2 Box">
+        <img src="https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-14-pro-max-silver-back.png?v=34" alt="images here">
+      </div>
+      <div class="Sub3 Box">
+        <img src="https://pngpix.com/images/hd/iphone-12-with-wallpaper-png-05212024-cqwupg626jo69y7m.jpg" alt="images here">
+      </div>
+      <div class="Sub4 Box">
+        <img src="https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-14-pro-max-deep-purple-back.png?v=10" alt="images here">
+      </div>
+      <div class="Sub6 Box">
+        <img src="https://pngimg.com/d/iphone_11_PNG13.png" alt="images here">
+      </div>
+    <div class="Sub5">
+        <img src="https://wallpapers.com/images/hd/apple-logo-silver-364lc2f68kt51nm3.jpg" alt="Apple logo">
+    </div>
+    </div>
+
+    <div class="Second">
+        <div class="Box1">
+            <h2>Sign In</h2>
+            <form>
+                <input type="text" placeholder="User name">
+                <input type="number" placeholder="User number">
+                <input type="email" placeholder="User mail">
+                <button>Sign in</button>
+            </form>
+        </div>
+        <div class="Box2">
+            <img src="https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-14-plus-red-back.png?v=7ba60ec5" alt="Images here">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const form = document.querySelector("form");
+    const inputs = document.querySelectorAll("input");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); 
+        let username = inputs[0].value.trim();
+        let number = inputs[1].value.trim();
+        let email = inputs[2].value.trim();
+        if (username === "" || number === "" || email === "") {
+            alert("Please fill all fields");
+            return;
+        }
+        if (number.length < 10) {
+            alert("Enter a valid phone number");
+            return;
+        }
+        if (!email.includes("@")) {
+            alert("Enter a valid email");
+            return;
+        }
+        localStorage.setItem("username", username);
+        localStorage.setItem("email", email);
+        alert("Sign In Successful!");
+        window.location.href = "home.html"; 
+    });
+</script>

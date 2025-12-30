@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apple Store</title>
+<link rel="stylesheet" href="store.css">
+</head>
+<body>
+<header class="navbar">
+    <img src="https://static.vecteezy.com/system/resources/previews/020/489/291/non_2x/3d-logo-of-apple-iphone-free-png.png" alt="Apple logo">
+    <h2>Apple Store</h2>
+    <nav>
+        <a href="store.html" class="active">Store</a>
+        <a href="#" onclick="goPage('mac')">Mac</a>
+        <a href="#" onclick="goPage('ipad')">iPad</a>
+        <a href="#" onclick="goPage('iphone')">iPhone</a>
+        <a href="#" onclick="goPage('accessories')">Accessories</a>
+        <a href="#" class="cart" onclick="openCart()">🛒</a>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-left">
+        <h1><span>Store</span></h1>
+    </div>
+
+    <div class="hero-right">
+        <h2>Give something special<br>this New Year.</h2>
+        <a href="#">Connect with a Specialist ↗</a><br>
+        <a href="#">Find an Apple Store ↗</a>
+    </div>
+</section>
+<section class="categories">
+    <div class="category" onclick="openCategory('Mac')">
+        <img src="https://pngimg.com/uploads/macbook/macbook_PNG65.png">
+        <p>Mac</p>
+    </div>
+
+    <div class="category" onclick="openCategory('iPhone')">
+        <img src="https://pngimg.com/uploads/iphone_13/iphone_13_PNG30.png">
+        <p>iPhone</p>
+    </div>
+
+    <div class="category" onclick="openCategory('iPad')">
+        <img src="https://cdn.tmobile.com/content/dam/t-mobile/en-p/internet-devices/apple/Apple-iPad-Air-5th-gen/Purple/Apple-iPad-Air-5th-gen-Purple-frontimage.png">
+        <p>iPad</p>
+    </div>
+
+    <div class="category" onclick="openCategory('Watch')">
+        <img src="https://www.pngall.com/wp-content/uploads/15/Apple-Watch-PNG-Photos.png">
+        <p>Apple Watch</p>
+    </div>
+
+    <div class="category" onclick="openCategory('AirPods')">
+        <img src="https://pngpix.com/images/hd/apple-airpods-side-view-illustration-png-06292024-m1ib6ihrewd64h74.jpg">
+        <p>AirPods</p>
+    </div>
+
+    <div class="category" onclick="openCategory('Accessories')">
+        <img src="https://i.pinimg.com/originals/c7/6e/ae/c76eaef537c4517fc2e50c2031fd7175.jpg">
+        <p>Accessories</p>
+    </div>
+</section>
+<section class="products">
+
+    <div class="card">
+        <img src="https://www.freepnglogos.com/uploads/macbook-png/apple-macbook-pro-with-retina-display-hands-preview-4.png">
+        <h3>Macbook laptop</h3>
+        <p>₹1,00,000</p>
+        <button onclick="addToCart('Macbook laptop')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://freepngimg.com/thumb/macbook/70194-apple-family-laptop-pro-air-macbook.png">
+        <h3>Macbook Air</h3>
+        <p>₹1,60,000</p>
+        <button onclick="addToCart('Macbook Air')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://media.ldlc.com/apple/MacBook_Pro_16/imgMacBookPro16/S1_Smart_1@2x.png">
+        <h3>Macbook Pro</h3>
+        <p>₹2,34,999</p>
+        <button onclick="addToCart('Macbook Pro')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<section class="products">
+    <div class="card">
+        <img src="https://www.pngall.com/wp-content/uploads/15/Apple-Watch-Transparent.png">
+        <h3>Apple watch ultra 3</h3>
+        <p>₹1,00,000</p>
+        <button onclick="addToCart('Apple watch ultra 3')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://www.rogers.com/apple-images/watch/40mm-grey-angle.png">
+       <h3>Apple watch series 3</h3>
+        <p>₹89,0000</p>
+        <button onclick="addToCart('Apple watch series 3')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://www.pngarts.com/files/8/Apple-Watch-Download-PNG-Image.png">
+        <h3>Apple watch series 11</h3>
+        <p>₹67,999</p>
+        <button onclick="addToCart('Apple watch series 11')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<section class="products">
+    <div class="card">
+        <img src="https://www.pngall.com/wp-content/uploads/5/iPad-PNG-Image-HD.png">
+        <h3>ipad pro</h3>
+        <p>₹75,000</p>
+        <button onclick="addToCart('ipad pro')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://res-5.cloudinary.com/grover/image/upload/v1630928864/xthpsyi7jsxpsshbiuo9.png">
+        <h3>ipad Air</h3>
+        <p>₹89,0000</p>
+        <button onclick="addToCart('ipad Air')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://cdn.tmobile.com/content/dam/t-mobile/en-p/internet-devices/apple/Apple-iPad-Air-5th-gen/Purple/Apple-iPad-Air-5th-gen-Purple-frontimage.png">
+        <h3>ipad Mini</h3>
+        <p>₹48,999</p>
+        <button onclick="addToCart('ipad Mini')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<section class="products">
+    <div class="card">
+        <img src="https://pngimg.com/uploads/airPods/airPods_PNG36.png">
+        <h3>airpods</h3>
+        <p>₹89,000</p>
+        <button onclick="addToCart('airpods')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://pngpix.com/images/hd/apple-airpods-d-x1pwnf3yp1ydl09z.jpg">
+        <h3>airpods</h3>
+        <p>₹1,00,000</p>
+        <button onclick="addToCart('airpods')">Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="https://pngpix.com/images/hd/apple-airpods-b-8pn07yl6mlx63g14.jpg">
+        <h3>airpods</h3>
+        <p>₹99,999</p>
+        <button onclick="addToCart('airpods')">Add to Cart</button>
+    </div>
+    <section class="scroll-section">...</section>
+</section>
+<footer><div class="footer-bottom">
+        © 2025 iPhone Store. All rights reserved.
+    </div></footer>
+<script>
+function addToCart(name, price) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let existing = cart.find(item => item.name === name);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      name: name,
+      price: Number(price),
+      quantity: 1
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "cart.html";
+}
+</script>
+<link rel="stylesheet" href="store.css">
+<script src="store.js"></script>
+</body>
+</html>

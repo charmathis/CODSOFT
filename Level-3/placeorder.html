@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Place Order</title>
+<link rel="stylesheet" href="placeorder.css">
+</head>
+<body>
+
+<div class="order-box">
+    <h1>Confirm Your Order</h1>
+    <p class="method">
+        Payment Method: <span id="method"></span>
+    </p>
+    <div class="payment-box hidden" id="upiBox">
+        <h3>Pay using UPI</h3>
+        <input type="text" placeholder="Enter UPI ID (example@upi)" id="upiId">
+        <p>OR Scan QR</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=UPI-PAYMENT"
+             class="qr">
+    </div>
+    <div class="payment-box hidden" id="codBox">
+        <h3>Delivery Address</h3>
+        <textarea placeholder="Enter full delivery address"></textarea>
+    </div>
+    <div class="payment-box hidden" id="bankBox">
+        <h3>Bank Account Details</h3>
+        <input type="text" placeholder="Account Number">
+        <input type="text" placeholder="IFSC Code">
+    </div>
+
+    <button class="confirm-btn" onclick="confirmOrder()">Confirm Order</button>
+</div>
+<div id="successScreen" class="successScreen">
+    <div class="tick">✔</div>
+    <h2>Order Placed Successfully</h2>
+    <p>Your order has been confirmed 🎉</p>
+</div>
+<script src="placeorder.js"></script>
+</body>
+</html>
